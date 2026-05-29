@@ -8,15 +8,15 @@ int calcdays(int index,int ac,vector<vector<int>>&activity,vector<vector<int>>&d
         if(i!=ac){
            ans=max(ans,calcdays(index-1,i,activity,dp)+activity[index][i]);
         }
-        return dp[index][ac]=ans;
     }
+    return dp[index][ac]=ans;
 }
 int main(){
     int n, ac;
     cout<<"Enter no. of days no. of activity";
     cin>>n>>ac;
     vector<vector<int>>activity;
-    vector<vector<int>>dp(n,vector<int>(3,-1));
+    vector<vector<int>>dp(n,vector<int>(4,-1));
     for(int i=0;i<n;i++){
         vector<int>temp;
         for(int j=0;j<ac;j++){
